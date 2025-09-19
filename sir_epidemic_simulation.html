@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIR Epidemic Simulation</title>
+    <link rel="stylesheet" href="./style/sir_epidemic_simulation.css">
+</head>
+<body>
+
+
+<!--Intro-->
+    <header>
+        <nav>
+            <h1 class="title"><span>s</span>IR Epidemic Simulation</h1>
+            <div class="text-presentation">
+                This project is a simple Python simulation of the SIR (Susceptible – Infected – Recovered) epidemiological model. It allows you to visualize how a disease spreads in a closed population over time, based on two major parameters: the transmission rate (β) and the recovery rate (γ).
+            </div>
+            <p>The objective is both educational (understanding the dynamics of infections) and technical (translating a mathematical model into simulation and visualization).</p>
+            <h2>Technoloigies & stack</h2>
+                <p>Language : Python</p>
+                <p>Main library: Matplotlib (visualization)</p>
+                <p>Optional: NumPy for vectorization and performance</p>
+        </nav>
+    </header>  
+
+
+    
+
+    <section id="presentation-model">
+        <h2>From SIR to advanced models</h2>
+        <div class="parent">
+            <div class="div1">
+                <p>The classic SIR (Susceptible – Infected – Recovered) model was the first mathematical model used to describe epidemics. Today, more complex extensions are used : </p>
+                <ul>
+                    <li>SEIR: adds Exposed (infected but not yet contagious)</li>
+                    <li>SIRS/SIRV: loss of immunity or vaccination</li>
+                    <li>Stochastic models, contact networks, agent-based simulations</li>
+                    <p>During COVID-19, SEIR models were used to predict the peak and assess the impact of lockdowns.</p>
+                    <p>This project provides a solid foundation for moving toward a more comprehensive model, enabling the preparation of more accurate simulations for future developments.</p>
+                </ul>
+            </div>
+            <div class="div2"></div>
+            <div class="div3"> 
+                <img src="https://i.pinimg.com/736x/99/2b/ae/992bae3021f1a1d50f40f71721827c44.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sir-model">
+        <h2>Scientific model</h2>
+        <h4>Description of the SIR model</h4>
+        <p>The SIR model is a classic compartmental model in epidemiology. The population is divided into three groups :</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Significance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">S</th>
+                    <td>Susceptible individuals (not yet infected)</td>
+                </tr>
+                <tr>
+                    <th scope="row">I</th>
+                    <td>Infected individuals (can transmit the disease)</td>
+                </tr>
+                <tr>
+                    <th scope="row">R</th>
+                    <td>Individuals who have recovered or are immunes</td>
+                </tr>
+            </table>
+    </section>
+
+    <!--Maths Part of de simulation-->
+    <section id="sir_table">
+        <h2>Mathematical model</h2>
+        <p>The model is based on the following differential equations :</p>
+            <div class="equation">
+                <p>$$ \frac{dS}{dt} = - \beta \cdot \frac{S \cdot I}{N} $$ </p>
+                <p> $$ \frac{dI}{dt} = \beta \cdot \frac{S \cdot I}{N} - \gamma \cdot I $$ </p>
+                <p> $$ \frac{dR}{dt} = \gamma \cdot I $$ </p>
+            </div>
+            
+                <ul>
+                    <li>\(S(t)\) = nombre de susceptibles.</li>
+                    <li>\(I(t)\) = nombre d’infectés.</li>
+                    <li>\(R(t)\) = nombre de rétablis.</li>
+                    <li>\(N = S + I + R\) = taille de la population.</li>
+                    <li>\(\beta\) = taux de transmission.</li>
+                    <li>\(\gamma\) = taux de récupération.</li>
+                </ul>
+            
+
+        </section>
+
+        <!--Output of the programm-->
+            <section id="output">
+                <h2>Visualization</h2>
+                <p>The curves generated follow the typical pattern of an epidemic : </p>
+                <ul>
+                    <li>S (blue) decreases over time</li>
+                    <li>I (orange) increases to a peak, then decreases</li>
+                    <li>R (green) grows monotonically</li>
+                </ul>
+                <img src="./assets/SIR_graphe.png" alt="">
+                <hgroup>
+                    <p>A peak in infections is observed around day ~35.</p>
+                    <p>The decline in susceptible individuals stabilizes once the epidemic has been extinguished.</p>
+                    <p>The recovered eventually represent almost the entire population, a sign that herd immunity has been achieved.</p>
+                    <p>This graph shows the peak of the epidemic and illustrates the effect 
+                        of the β and γ parameters on the duration and intensity of the epidemic.
+                    </p>
+                 </hgroup>
+            </section>
+            <section id="skills">
+                <h2>What I have learned</h2>
+                <ul>
+                    <li>Understanding how the SIR model works to simulate the spread of an epidemic.</li>
+                    <li>Translate equations into graphs and interpret the results.</li>
+                    <li>Create a solid theoretical and technical foundation, enabling the model to be extended to more complex simulations and applied to real-world cases.</li>
+                </ul>
+            </section>
+
+            <footer>
+                <button>
+                    <a href="./neural_network.html">Neural Network</a>
+                </button>
+                <button>
+                    <a href="./neowatch.html">NEO Watch</a>
+                </button> 
+                <button>
+                    <a href="https://boesiagallery.com/" target="_blank">Boesia Gallery</a>
+                </button>
+                <button>
+                    <a href="./index.html">Home</a>
+                </button>
+                </footer>
+
+
+<script src="./app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>            
+</body>
+</html>

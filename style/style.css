@@ -1,0 +1,281 @@
+
+/* Mobile First*/
+
+
+@font-face {
+    font-family: 'TheFont';
+    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
+  }
+  
+  @keyframes letter-breathe {
+    from, to {
+      font-weight: 100;
+    }
+  
+    50% {
+      font-weight: 600;
+    }
+  }
+
+  ::selection {
+    background-color: rgb(63, 63, 207);
+    color: white;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    background-color: white;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  
+
+/* Header */
+header {
+    margin: 40px 0px 25px;
+    display: flex;
+    gap: 10px;
+}
+
+
+nav .blur-contener {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  height: 100px;
+  width: 100px;
+  margin: 0px 10px 50px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 0.8px solid rgba(216, 216, 216, 0.795) ;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+
+  nav {
+    justify-content: flex-start;
+    margin: 0;
+
+  }
+   .title {
+    margin: 0 15px 0 20px;
+    text-align: start;
+    font-size: 80px;
+    font-weight: 200;
+    color: black;
+}
+
+   .title span {
+    letter-spacing: 5px;
+    font-family: 'TheFont';
+    animation: letter-breathe 1.5s ease-in-out infinite;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  }
+
+  /*End Header*/
+
+  .text-presentation {
+    letter-spacing: .015em;
+    font-size: .65625rem;
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    font-weight: 350;
+    width: auto;
+    margin: 0 20px 90px 20px ;
+}
+
+
+/* Experience Section */
+
+main {
+
+    margin: 40px 15px;
+    align-items: start;
+
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 1rem;
+    height: auto;
+    padding: 12px;
+    margin: 0 0 80px;
+
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    text-align: start;
+    font-weight: 350;
+
+
+    background-size: cover;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 10px ;
+
+}
+
+.parent h1 {
+  font-size: 14px;
+}
+
+ .parent img:first-of-type {
+  height: auto;
+  width: 330px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.parent img:last-child:hover {
+  scale : 1.2;
+transition: all 0.8s;
+}
+
+.parent img:not(:hover) {
+  scale: 1;
+  transition: all 1s;
+}
+
+
+
+.parent img:last-child {
+  border: 1px solid rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
+
+  border-radius: 20px;
+  margin-top: 10px;
+  height: 40px ;
+  width: 40px;
+  justify-items: end;
+  display: flex;
+}
+    
+.div1 {
+    height: auto;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+
+}
+
+.div2 {
+  color: rgb(0, 0, 0);
+  height: auto;
+  border-radius: 20px;
+  padding: 15px;
+
+}
+
+.div3 {
+  color: rgb(0, 0, 0);
+  height: auto;
+  border-radius: 20px;
+  padding: 15px;
+
+}
+
+.div4 {
+  color: rgb(0, 0, 0);
+  height: auto;
+  border-radius: 20px;
+  padding: 15px;
+
+}
+
+
+/* Contact Section */
+/*Footer*/
+
+
+
+footer {
+  display: flex;
+  padding: 0;
+  margin: 50px 0px 20px 0px  ;
+  display: flex;
+  justify-content: space-around;
+  justify-items:start ;
+  gap: 10px;
+
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px ;
+  cursor: crosshair;
+justify-content: space-around;
+justify-items: flex-start;
+display: flex;
+margin: 10;
+}
+
+
+
+button  a{
+  display: flex;
+  justify-content: space-around;
+  justify-items:center;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: crosshair;
+}
+
+
+
+footer button:hover {
+  scale : 1.2;
+  transition: all 1s;
+  
+  }
+  
+  footer button:not(:hover) {
+    scale: 1;
+    transition: all 1s;
+  }
+
+
+footer img:hover {
+  scale : 1.2;
+  transition: all 1s;
+  
+  }
+  
+  footer img:not(:hover) {
+    scale: A;
+    transition: all 1s;
+  }
+
+  
+  footer img {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 10;
+    height: 30px;
+    width: 30px;
+    cursor: crosshair;
+
+  }

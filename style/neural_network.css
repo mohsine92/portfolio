@@ -1,0 +1,346 @@
+
+@font-face {
+    font-family: 'TheFont';
+    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
+  }
+  
+  @keyframes letter-breathe {
+    from, to {
+      font-weight: 100;
+    }
+  
+    50% {
+      font-weight: 900;
+    }
+  }
+
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+
+    body {
+      margin: 0 20rem !important;
+
+    }
+    
+    
+    p {
+      margin: 25px 200px 20px 60px;
+    }
+
+    #fondamental,#Loss p {
+      text-align: start !important;
+      }
+
+      
+
+   
+  }
+  
+  /* Large desktop */
+  @media (min-width: 1440px) {
+
+    body {        
+        max-width: 2560px;
+    }
+
+    #fondamental,#Loss p {
+      text-align: start !important;
+      }
+  }
+
+    /* Tablette */
+    @media (min-width: 768px) {
+
+      body {
+        font-size: 1.1rem;
+        padding: 2rem;
+      }
+
+      
+      #fondamental,#Loss p {
+        text-align: start !important ;
+        }
+      }
+
+
+  ::selection {
+    background-color: rgb(63, 63, 207);
+    color: white;
+  }
+
+  * {
+    margin: 0 ;
+    padding: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+
+    background-color: white ;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  section {
+    margin: 20px 20px 25px;
+
+  }
+
+  h2 {
+    margin: 100px 0px 20px 0px;
+    padding: 10px 0px ;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    border: 0.8px solid black;
+    text-align: center;
+    font-weight: 500;
+  }
+
+
+  
+  li p {
+      text-align: start;
+      letter-spacing: .015em;
+      font-size: .65625rem;
+      line-height: .9125rem;
+      letter-spacing: .015em;
+      font-size: 13px;
+      font-weight: 350;
+      width: 94%;
+      margin: 5px 20px 0px 10px;
+  }
+  
+   li {
+    margin: 20px 0px 0px 20px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    list-style-type:disc;
+  }
+
+  p {
+    text-align: start;
+    letter-spacing: .015em;
+    font-size: .65625rem;
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    font-weight: 350;
+    width: 94%;
+    margin: 25px 20px 20px 0px;
+  }
+
+  
+  
+
+    /* Header */
+header {
+    margin: 40px 0px 25px;
+    display: flex;
+}
+
+
+
+
+  nav {
+    justify-content: flex-start;
+    margin: 0;
+ 
+  }
+   .title {
+    margin: 30px 15px 80px 20px;
+    line-height: 60px;
+    text-align: start;
+    font-size: 80px;
+    font-weight: 200;
+    color: black;
+}
+
+   .title span {
+    letter-spacing: 5px;
+    font-family: 'TheFont';
+    animation: letter-breathe 1.5s ease-in-out infinite;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  }
+
+  .text-presentation {
+    letter-spacing: .015em;
+    font-size: .65625rem;
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    font-weight: 350;
+    width: auto;
+    margin: 35px 20px 20px 20px;
+}
+
+/* Main - technologies & stack section  */
+main {
+  margin: 20px 20px 25px;
+}
+
+
+/* Project description */
+
+img {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+  justify-self:center;
+  display: flex;
+  height: auto;
+  width: 370px;
+}
+
+/*Datasets section */
+
+#sir_table {
+  padding: 10px;
+}
+
+#sir_table p {
+  margin: 30px 5px 0px 20px;
+}
+#sir_table h2 {
+  margin: 30px 20px 20px 20px;
+}
+
+table {
+border: 0.8px solid rgba(140, 140, 140, 0.383);
+font-family: sans-serif;
+font-size: 0.8rem;
+letter-spacing: 1px;
+border-radius: 10px;
+padding: 10px;
+text-align: start;
+margin: 0;
+font-size: 11px;
+}
+
+thead {
+background-color: rgb(0, 0, 0);
+border-radius: 30px;
+
+}
+
+th {
+  mix-blend-mode: difference;
+  color: white;
+  font-weight: 360;
+}
+
+th,td {
+gap: 1rem;
+border: 1px solid rgb(255, 255, 255);
+
+mix-blend-mode: difference;
+color: white;
+padding: 10px 20px;
+border-radius: 10px;
+
+}
+
+/*fondamentals section */
+
+#fondamental {
+  background-color: black;
+  color: white;
+  padding: 15px 20px 30px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  border-radius: 30px;
+}
+
+#fondamental img {
+  border-radius: 30px;
+  width: 300px;
+  filter: invert(100%);
+}
+
+#fondamental h2{
+  margin-top: 25px;
+color: white;
+border: 1px solid white;
+}
+
+
+
+/*Visualization section*/
+
+#Visualization p{
+text-align: center;
+margin: 0 auto;
+}
+
+
+#Visualization img{
+  margin-bottom: 15px;
+  }
+
+
+
+/*Footer*/
+
+
+footer {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  margin-top: 20%;
+  gap: 20px;
+
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px ;
+  cursor: crosshair;
+}
+
+
+
+button  a{
+  display: flex;
+  justify-content: space-around;
+  justify-items:center;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: crosshair;
+}
+
+
+
+footer button:hover {
+  scale : 1.2;
+  transition: all 1s;
+  
+  }
+  
+  footer button:not(:hover) {
+    scale: 1;
+    transition: all 1s;
+  }
+  
+    
+    footer img:not(:hover) {
+      scale: 1;
+      transition: all 1s;
+    }
+  
+  

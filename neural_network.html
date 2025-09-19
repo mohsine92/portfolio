@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initialisation of Neural Networks</title>
+    <link rel="stylesheet" href="./style/neural_network.css">
+</head>
+<body>
+    <!--Introduction-->
+    <header>
+        <nav>
+            <h1 class="title"><span>N</span>eural networks</h1>
+            <div class="text-presentation">
+                <ul>
+                    <li> Why this project ?
+                        <p>To understand what happens “under the hood” of a neural network without using abstract ML frameworks such as TensorFlow or PyTorch.
+                         Ideal for strengthening mathematical foundations, algorithmic implementation, and visualization.
+                        </p>
+                    </li>
+                    <li>Target audience :
+                        <p>Machine learning students, curious developers, anyone who wants to understand how neural networks work at a fundamental level.</p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header> 
+    <main>
+        <h2>Technologies & stack</h2>
+        <ul>
+            <li>Languages : 
+                <p>Python</p>
+            </li>
+            <li>Libraries used : 
+                <p>NumPy — for all vectorized calculations, matrix manipulation, derivation, etc.</p>
+                <p>Matplotlib — for visualizations: loss, decision boundaries, etc.</p>
+            </li>
+            <li>No “high-level” ML framework (no TensorFlow, PyTorch, etc.): everything is implemented “manually.”</li>
+        </ul>
+    </main>
+
+    <!--Project description -->
+    <section id="fondamental">
+        <h2>Fundamentals</h2>
+        <h3>Neurons: from biology to computer science</h3>
+        <p>Artificial neural networks are inspired by the functioning of the human brain. A biological neuron receives signals via its dendrites, processes them, and then sends a signal via its axon if the excitation is sufficient.</p>
+        <img src="./assets/neuron_model.jpeg" alt="">
+        <p>In computer science, we model this process in a simplified way :</p>
+        <ul>
+            <li>The inputs $x_1, x_2, ...$ correspond to the received signals.</li>
+            <li>Each entry is multiplied by a weight $w_1, w_2, ...$ that represents its importance.</li>
+            <li>We add everything together and add a bias $b$.</li>
+            <li>Finally, the result is passed through an activation function $\sigma$ (sigmoid function), which acts as the “activation threshold” of the biological neuron.</li>
+        </ul>
+
+        <p class="equation">$$
+            \text{output} = \sigma\left(\sum_i w_i x_i + b\right)
+            $$
+        </p>
+            <p>The value calculated by this neuron simply becomes the “signal” transmitted to the neurons in the next layer, allowing several neurons to be chained together to form a complete network.</p>
+    </section>
+
+    <!--Architecture-->
+    <section id="architecture">
+        <h3>Architecture</h3>
+        <ul>
+            <li>Input layer :
+                <p>This is the first layer that receives the input data, with each feature represented by a neuron.</p>
+            </li>
+            <li>Hidden layers :
+                <p>The intermediate layers perform the processing and calculations; you can choose how many neurons to put in them.</p>
+            </li>
+            <li>Output layer :
+                <p>The final layer that produces the network's output, either a single neuron (e.g., binary prediction) or several (e.g., multi-class classification).</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="Loss">
+        <h3>Loss function</h3>
+        <p>The MSE function simply measures how wrong the network is. The smaller the value, the more accurately the network predicts the expected outputs.</p>
+        <p class="equation">
+            $$
+            L = \frac{1}{N} \sum_{i=1}^N (y_i - \hat{y}_i)^2
+            $$
+        </p>
+    </section>
+
+    <section id="Xavier">
+        <h3>Xavier initialization</h3>
+        <p>The weights are initially chosen to prevent signals from becoming too large or too small as they pass through the layers, which helps the network learn faster.</p>
+    </section>
+    <section id="training-Pipeline">
+        <h2>Training Pipeline</h2>
+        <h3>Forward Propagation</h3>
+        <p>Each neuron performs its calculations and sends its result to the next layer. The forward pass involves passing data from the beginning to the end of the network to obtain a prediction.</p>
+        <h3>Backpropagation</h3>
+        <p>This is how the network learns: we look at the final error, then work our way back layer by layer to adjust the weights and bias in order to make better predictions next time.</p>
+        <h3>Gradient descent</h3>
+        <p>Forward + backprop is repeated several times (epochs), gradually adjusting the weights until the error is minimal.</p>
+    </section>
+
+    <section id="datasets">
+        <h2>Datasets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Significance</th>
+                    <th scope="col">Interest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">XOR</th>
+                    <td>4 simple combinations of 0 and 1 as input</td>
+                    <td>Used to verify that the network can learn a simple but non-linear rule: the output is 1 only if the inputs are different.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Spirale 2D</th>
+                    <td>Points wound in two spirals</td>
+                    <td>Used to test whether the network can trace a complex decision boundary. If it works, it means that your implementation is capable of solving problems that are more difficult than a simple XOR.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Visualization">
+        <h2>Visualization</h2>
+        <img src="./assets/XOR-Data-&-Prediction.png" alt="">
+        <p>XOR – Dataset and Predictions : <br>
+            Shows the 4 input points and what the network predicts after training. The closer the predictions are to 0 or 1 correctly, the better the network has learned.
+        </p>
+        <img src="/assets/XOR-Frontiere_decision.png" alt="">
+        <p>XOR – Decision Boundary : <br>
+            Visualize how the network separates the 0s and 1s in the plane. A good boundary looks like an X that clearly separates the classes.</p>
+        <img src="./assets/courbe-perte-XOR.png" alt="">
+        <p>Loss Curve – XOR : <br>
+             MSE loss gradually decreases over time → a sign that the network is learning.
+        </p>
+        <img src="./assets/courbe-perte-spiral.png" alt="">
+        <p>Loss Curve – Spiral : <br>
+             Same idea as for XOR, but on a more complex problem. We want to see the loss decrease steadily.
+        </p>
+        <img src="./assets/spiral-dataset-predi.png" alt="">
+        <p>Spiral – Dataset and Predictions : <br>
+             Each point has a predicted probability (0 = blue, 1 = red). The better the points are classified (close to the correct color), the better the network has understood the problem.
+        </p>
+        <img src="./assets/spiral-fontiere-decision.png" alt="">
+        <p>Spiral – Decision Boundary : <br>
+             The transition zone between red and blue shows how the network separates the two spirals. The closer the boundary follows the shape of the spirals, the better the learning.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>What I have learned</h2>
+        <ul>
+            <li>How a network calculates outputs from inputs</li>
+            <li>Why weight initialization and learning rate are important</li>
+            <li>How to visualize learning and the decision boundary</li>
+            <li>Understanding the step-by-step process of forward and backpropagation</li>
+        </ul>
+    </section>
+
+    <footer>
+        <button>
+            <a href="./sir_epidemic_simulation.html">SIR Epidemic Simulation</a>
+        </button>
+        <button>
+            <a href="./neowatch.html">NEO Watch</a>
+        </button> 
+        <button>
+            <a href="https://boesiagallery.com/" target="_blank">Boesia Gallery</a>
+        </button>
+        <button>
+            <a href="./index.html">Home</a>
+        </button>
+        </footer>
+
+
+
+<script src="./app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>           
+</body>
+</html>

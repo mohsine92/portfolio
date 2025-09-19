@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO Watch - Asteroid Tracker Dashboard</title>
+    <link rel="stylesheet" href="./style/neowatch.css">
+    <link rel="icon" href="">   
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="title"><span>A</span>steroid Tracker - NEO Watch</h1>
+            <h2>Why create this project ?</h2>
+            <div class="text-presentation">
+                    <h4>Interest in space and scientific engineering.</h4>
+                    <p>This project was born out of my passion for the engineering behind space observation tools. It stems from a desire to understand, model, represent, and make accessible real astronomical phenomena, particularly near-Earth objects (NEOs).</p>
+                    
+                    <h4>Preparing for NASA Space Apps Challenge Hackathon 2025 : </h4>
+                    <p>This project is specifically preparing me for a NASA hackathon, with challenges in data science, modeling, visualization, and innovation. The goal is to gain experience, rigor, understanding of spatial datasets, mastery of scientific APIs, and the ability to quickly produce reliable prototypes.</p>
+                    
+                    <h4>Reference to NEO Surveyor. </h4>
+                    <p>This project is a scaled-down version of the NEO Surveyor mission. NEO Surveyor is the first space telescope designed specifically to detect potentially hazardous asteroids and comets.</p>
+                    
+                    <h4>Language / Technologies : </h4>
+                    <p>Python, Streamlit, Pandas, Matplotid, API NASA NeoWs</p>
+                
+                    <img src="./assets/asteroid.JPG" alt="asteroid-NEO">
+            </div>
+        </nav>
+    </header> 
+
+    <section id="issues-objectives">
+        <h2>Issues & Objectives</h2>
+        <h4>Scientific issues</h4>
+        <p>How to effectively track near-Earth asteroids, identify the most dangerous ones based on their size and trajectory, and visualize this information to raise awareness or issue alerts.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Functional objectives</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Query NASA datasets (NeoWs API) to obtain asteroid flybys.</td>
+                </tr>
+                <tr>
+                    <td>Allow selection of a date range for the search.</td>
+                </tr>
+                <tr>
+                    <td>Display results in an interactive table (name, estimated diameter, date of passage, hazard status).</td>
+                </tr>
+                <tr>
+                    <td>Generate visualizations (scatter plots, etc.) showing the correlation between size, date, and dangerous status.</td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="https://i.pinimg.com/1200x/ab/11/bb/ab11bbf41e89501c966a7e3f2a3db905.jpg" alt="">
+    </section>
+    <section id="methodologie">
+        <h2>Methodology</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Stage</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="colgroup">Data acquisition</th>
+                    <td>Query NASA datasets (NeoWs API) to obtain asteroid flybys.</td>
+                </tr>
+                <tr>
+                    <th scope="colgroup">Pre-treatment / Cleaning</th>
+                    <td>Transformation of raw data (dates, dimensions, hazardous status), format management, handling of missing values.</td>
+                </tr>
+                <tr>
+                    <th scope="colgroup">Analysis / Classification</th>
+                    <td>Sorting and filtering by diameter, date, hazardous status; preparing data for visualization.</td>
+                </tr>
+                <tr>
+                    <th scope="colgroup">Visualization & Interface</th>
+                    <td>Web interface via Streamlit, graphs with Matplotlib, interactive tables.</td>
+                </tr>
+                <tr>
+                    <th scope="colgroup">Validation</th>
+                    <td>Comparison with official NASA data to ensure reliability.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="results">
+        <h2>Visualization</h2>
+        <img src="./assets/size-by-date-NEO.png" alt="">
+        <p>This graph shows the distribution of detected asteroids based on their diameter (Y axis) and date of passage (X axis). The red dots represent objects classified as potentially hazardous, while the green dots indicate harmless objects. This representation allows us to quickly identify days when several large asteroids pass close to Earth and prioritize observations.</p>
+        <img src="./assets/data-neowatch.png" alt="">
+        <p>After selecting a desired observation period, the application performs a request to the NASA NeoWs (Near Earth Object Web Service) API.
+            The API returns a response containing, for each detected asteroid :</p>
+            <ul>
+                <li>The close-approach date</li>
+                <li>The asteroid’s name</li>
+                <li>Its estimated diameter (in meters)</li>
+                <li>A flag indicating whether it is classified as potentially hazardous</li>
+            </ul>
+            <p>This data is then processed and rendered in a dynamic table, allowing for quick and intuitive analysis.</p>
+        <img src="./assets/asteroid-NEO.png" alt="">
+        <p>Asteroids identified as passing close to Earth are classified in a table listing :</p>
+        <ul>
+            <li>Their close-approach date</li>
+            <li>Their name</li>
+            <li>Their estimated size</li>
+        </ul>
+    </section>
+    
+
+    <footer>
+        <button>
+            <a href="./sir_epidemic_simulation.html">SIR Epidemic Simulation</a>
+        </button>
+        <button>
+            <a href="./neowatch.html">Neural Network</a>
+        </button> 
+        <button>
+            <a href="https://boesiagallery.com/" target="_blank">Boesia Gallery</a>
+        </button>
+        <button>
+            <a href="./index.html">Home</a>
+        </button>
+    </footer>
+    
+</body>
+</html>

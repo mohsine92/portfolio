@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <style>
+
+          /* Desktop */
+    @media (min-width: 1024px) {
+        body {
+            margin: 0 20rem !important;
+        }
+    }
+        /* Large desktop */
+    @media (min-width: 1440px) {
+        body {        
+            max-width: 2560px;
+        }
+    }
+    
+           /* Tablette */
+    @media (min-width: 768px) {
+        body {
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+    }
+
+        body {
+            margin: 20px 20px 25px;
+
+        }
+
+        .button {
+            padding: 10px 8px;
+            border-radius: 30px;
+            border: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: space-around;
+        }
+
+        button {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        #content {
+            padding: 0px;
+            min-height: 200px;
+        }
+
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    body {
+        padding: 1rem;
+    }
+  }
+
+  /* Large desktop */
+@media (min-width: 1440px) {
+    body {        
+        max-width: 2560px;
+    }
+
+}
+/* Tablette */
+            @media (min-width: 768px) {
+      body {
+        font-size: 1.1rem;
+        padding: 2rem;
+      }
+    }
+
+    </style>
+    
+    <div class="button">
+        <button onclick="loadProject('sir_epidemic_simulation.html')">SIR epidemic simulation</button>
+        <button onclick="loadProject('neural_network.html')">Neural Networks</button>
+        <button onclick="loadProject('neowatch.html')">Asteroid Tracker</button>
+        <button onclick="loadProject('boesia_gallery.html')">Boesia Gallery</button>
+        <button><a href="./index.html">home</a></button>
+    </div>
+
+    <div id="content"></div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>           
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+
+
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    body {
+      margin: 0 20rem !important;
+    }
+
+
+      #presentation-model img {
+        margin: 0;
+        margin-top:0 !important;
+      }
+    }
+
+  /* Large desktop */
+@media (min-width: 1440px) {
+    body {        
+        max-width: 2560px;
+    }
+}
+
+
+    /* Tablette */
+    @media (min-width: 768px) {
+      body {
+        font-size: 1.1rem;
+        padding: 2rem;
+      }
+      
+      .equation p {
+      display: flex;
+      }
+  
+  }
+
+@font-face {
+    font-family: 'TheFont';
+    src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format('woff2');
+  }
+  
+  @keyframes letter-breathe {
+    from, to {
+      font-weight: 100;
+    }
+  
+    50% {
+      font-weight: 900;
+    }
+  }
+
+  ::selection {
+    background-color: rgb(63, 63, 207);
+    color: white;
+  }
+
+  * {
+    margin: 0 ;
+    padding: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    background-color: rgb(255, 255, 255) ;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  section {
+    margin: 40px 0px 25px;
+
+  }
+
+   h4{
+    margin: 30px 0 30px 20px;
+  }
+
+  h2 {
+    margin: 100px 20px 30px;
+    padding: 10px 0px;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    border: 0.8px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-weight: 500;
+}
+
+  
+  p {
+    text-align: start;
+    letter-spacing: .015em;
+    font-size: .65625rem;
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    font-weight: 350;
+    width: 94%;
+    margin: 5px 30px 20px 20px;
+
+}
+
+    /* Header */
+header {
+    margin: 40px 0px 25px;
+    display: flex;
+    gap: 10px;
+}
+
+  nav {
+    justify-content: flex-start;
+    margin: 0;
+ 
+  }
+   .title {
+    margin: 30px 15px 0 20px;
+    line-height: 60px;
+    text-align: start;
+    font-size: 70px;
+    font-weight: 200;
+    color: black;
+}
+
+    span {
+    font-size: 70px;
+    letter-spacing: 5px;
+    font-family: 'TheFont';
+    animation: letter-breathe 1.5s ease-in-out infinite;
+    animation-delay: 2s;
+    animation-fill-mode:both;
+  }
+
+
+  .text-presentation {
+    letter-spacing: .015em;
+    font-size: .65625rem;
+    line-height: .9125rem;
+    letter-spacing: .015em;
+    font-size: 13px;
+    font-weight: 350;
+    width: auto;
+    margin: 60px 20px 20px 20px;
+}
+
+/* Presentation model*/
+
+#presentation-model img {
+
+  height: auto;
+  width: 200px;
+  border-radius: 0px;
+  margin-top: 50px;
+
+}
+
+/*Scientific model - description of the model sir*/
+
+
+table {
+  border: 0.8px solid rgba(140, 140, 140, 0.383);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  margin: 30px 30px 30px 30px;
+  padding: 15px;
+}
+
+thead {
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+
+}
+
+th {
+    mix-blend-mode: difference;
+    color: white;
+    font-weight: 360;
+}
+
+th,td {
+  gap: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+
+  mix-blend-mode: difference;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+}
+
+
+
+/*Maths Part of de simulation*/
+
+.equation p {
+    text-align: start;
+    width: auto;
+    }
+
+
+/*Output Section*/
+
+li {
+  margin: 25px 10px 20px 50px; ;
+  font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+
+}
+
+
+img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  justify-content: center;
+  justify-self:center;
+  display: flex;
+  height: auto;
+  width: 370px;
+}
+
+hgroup{
+  margin: 0 25px 50px 20px;
+  display: block;
+  justify-content: center;
+
+  justify-items: center;
+}
+
+hgroup p {
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    text-align: start;
+}
+
+
+/*Footer*/
+
+
+footer {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  margin-top: 20%;
+  gap: 20px;
+
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px 10px ;
+  cursor: crosshair;
+}
+
+
+
+button  a{
+  display: flex;
+  justify-content: space-around;
+  justify-items:center;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: crosshair;
+}
+
+
+footer button:hover {
+  scale : 1.2;
+  transition: all 1s;
+  
+  }
+  
+  footer button:not(:hover) {
+    scale: 1;
+    transition: all 1s;
+  }
+  
+    
+    footer img:not(:hover) {
+      scale: 1;
+      transition: all 1s;
+    }
+  
+
+
