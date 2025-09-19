@@ -108,6 +108,12 @@
 
 }
 
+img * {
+display: flex;
+justify-content: center;
+justify-items: center;
+}
+
     /* Header */
 header {
     margin: 40px 0px 25px;
